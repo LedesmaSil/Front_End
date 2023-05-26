@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="contacto.html">Ir a la de contatos</a> 
+        </nav>
+    </header>
+
+    <main>
+        <form action="g" method="get">
+            <fieldset>
+                <legend>Datos Personales</legend>
+
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" maxlength="2">
+
+                <label for="lastname">Apellido</label>
+                <input type="text" id="lastname" name="lastname">
+
+                <label for="dni">Dni</label>
+                <input type="number" id="dni" name="dni" min="0" max="">
+
+                <br><br>
+
+                <label for="email">Mail</label>
+                <input type="email" id="email" name="email" placeholder="Ej. silsole_24@yahoo.com.ar">
+
+                <br><br>
+
+                <label for="genre">Generos</label>
+                <input type="radio" id="genre" name="genre" value="f">Femenino
+                <input type="radio" id="genre" name="genre" value="m">Masculino
+                <input type="radio" id="genre" name="genre" value="o" checked>Otro
+
+                <br><br>
+
+                <label for="date">Fecha de Nacimiento</label>
+                <input type="date" id="genre" name="genre" value="f">Femenino
+            </fieldset>
+
+            <fieldset>
+                <legend>Tus conocimientos</legend>
+
+                <label for="lenguajes">Marca los lenguajes en los que tengas conocimientos</label>
+                <input type="checkbox" id="lenguajes" name="lenguajes" value="js"checked>JavaScript
+                <input type="checkbox" id="lenguajes" name="lenguajes" value="python">Python
+                <input type="checkbox" id="lenguajes" name="lenguajes" value="java">Java
+                
+                <br><br>
+
+                <label for="Known">Tuviste tu trabajo IT</label>
+                <select name="Known" id="Known">
+                    <option value="si">SI</option>
+                    <option value="no" selected>NO</option>
+                </select>
+
+                <br><br>
+
+                <label for="cv">Cargar tu CV</label>
+                <input type="file" id="cv" name="cv"  multiplo accept=".pdf, .png">
+                <br><br>
+
+                <label for="url">Ingresa ti Linkedin o pag personal</label>
+                <input type="url" id="url" name="url" >
+
+                <br>
+
+                <label for="description">Contanos sobre tus experiencias</label>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            
+            </fieldset>
+            <fieldset>
+                <legend>Tu perfil</legend>
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password">
+
+                <label for="Color">Elige un color</label>
+                <input type="color" name="color" id="color">
+            </fieldset>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+
+        </form>
+    </main>
+</body>
+</html>
