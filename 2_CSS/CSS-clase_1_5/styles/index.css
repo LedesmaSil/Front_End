@@ -1,0 +1,43 @@
+/*Comentario*/
+*/*sector universal*/{
+    /*background-color: yellowgreen;*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    background-image: url(../img/descarga.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1, h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}
+/*id #*/
+#main_title{
+    color: white;
+}
+/*
+#section1 p{
+
+}
+*/
+/*class .*/
+p{
+    border: solid 5px salmon;
+}
+.section1_p{
+    border: 2px dashed black;
+    text-align: center;
+}
+nav{
+    border: 2px solid blue;
+    text-align: center;
+    
+}
+nav a{
+    border: 2px solid red;
+    display: block;
+    padding: 20px 10px 40px;
+    margin: 10px 25px; /*arriba y abajo- izq y derec */
+}

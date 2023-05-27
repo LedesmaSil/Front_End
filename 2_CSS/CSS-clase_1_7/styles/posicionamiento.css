@@ -1,0 +1,43 @@
+#principal {
+    width: 800px;
+    height: 800px;
+    background-color: silver;
+    margin: auto;
+}
+
+#est {
+    width: 100px; 
+    height: 100px; 
+    background-color: grey;
+    position: static; 
+}
+
+#abs {
+    width: 100px; 
+    height: 100px; 
+    background-color: yellow;
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    z-index: 1;
+    
+}
+
+#rel {
+    width: 100px; 
+    height: 100px; 
+    background-color: lime;
+    position: relative; 
+    left: 10px;
+    top: 20px;
+    z-index: 2;
+}
+
+#fix {
+    width: 100px; 
+    height: 100px; 
+    background-color: aqua;
+    position: fixed;
+    right: 0;
+    top: 0; 
+}

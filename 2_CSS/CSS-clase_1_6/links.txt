@@ -1,0 +1,5 @@
+Medidias relativas: rem vs em
+https://desarrolloweb.com/faq/cual-es-la-diferencia-entre-rem-y-em
+
+Optimizacion img
+https://squoosh.app/

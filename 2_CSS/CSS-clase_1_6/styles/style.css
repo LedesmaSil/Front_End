@@ -1,0 +1,65 @@
+:root{
+    font-size: 20px;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-family: 'Alkatra', cursive;
+    font-weight: 700;
+    padding: 1em;
+}
+h2{
+    font-family: 'Alkatra', cursive;
+    font-weight: 400;
+}
+p{
+    /*
+    font-weight: bold;
+    font-style: italic;
+    */
+    border: solid 2px green;
+    width: 30%;
+    height: 60px;
+    /*
+    font-size: 20px;
+    padding: 1em;*/
+    font-size: 20
+    padding: 1rem;
+}
+#parrafo1{
+    color: aqua;
+}
+#parrafo2{
+    color: #a5f945;
+}
+#parrafo3{
+    color: rgb(205, 254, 42);
+}
+#parrafo4{
+    background-color: rgba(4, 0, 255, .5);
+}
+
+.fa-brands:{
+    color: #ff0000;
+    font-size: 30px;
+}
+.fa-brands:hover{
+    color: #fa8484;
+    font-size: 31px;
+}
+
+section, nav{
+    border: 2px solid blue;
+    width: 50%;
+}
+
+a{
+    border: solid 2px yellow;
+    /* display: inline-block
+    width: 30%;
+    height: 80px;
+    */
+}

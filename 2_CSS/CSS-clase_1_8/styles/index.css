@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1, h2{
+    color: blue;
+}
+
+/* Hijos directos */
+section > p{
+    background-color: aqua;
+}
+
+/* Hijos Indirectos */
+section * p{
+    background-color: green;
+}
+
+/* Etiquetas adyascentes */
+h1 + h2{
+    font-size: 4rem;
+}
+
+/* Pseudoclases */
+a:link{
+    color: green;
+}
+
+a:active{
+    color: red;
+}
+
+#navbar a:first-child{
+    font-weight: bold;
+}
+
+p:first-child{
+    font-weight: bold;
+}
+
+a:last-child{
+    font-weight: bold;
+}
+
+a:nth-child(2){
+    font-weight: bold;
+}
+
+a:nth-child(2n+1){
+    font-weight: bold;
+    color: red;
+}
+
+p:nth-child(even){
+    color: lightcoral;
+}
+
+/* Pseudoelementos */
+h2::first-letter{
+    font-size: 6rem;
+}
+
+#parrafo1::before{
+    content: "*";
+}
+
+p::first-line{
+    text-decoration: underline;
+}
+
+p::selection{
+    background-color: rgb(215, 110, 110);
+}
+
+/* Mobile First 
+@media screen and(min-whidth: 500px){
+    html{
+        background-color: yellow;
+    }
+}
+
+@media screen and(min-whidth: 800px){
+    html{
+        background-color: gray;
+    }
+    h2::first-letter{
+        font-size: 8rem;
+    }
+}
+*/
+
+/* Desktop First */
+@media screen and(min-whidth: 800px){
+    html{
+        background-color: yellow;
+    }
+}
+
+@media screen and(min-whidth: 500px){
+    html{
+        background-color: green;
+    }
+} 
