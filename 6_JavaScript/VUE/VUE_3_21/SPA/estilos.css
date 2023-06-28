@@ -1,0 +1,93 @@
+/* Estilos para los ejemplos de esta clase */
+* {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 1.6em;
+    color: white;
+    background-color: darkslateblue;
+    border-radius: 3px;
+    border: 1px solid #303030;
+    padding: 5px;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: white;
+    background-color: darkslateblue;
+    border-radius: 3px;
+    border: 1px solid #303030;
+    padding: 5px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: white;
+    background-color:cadetblue;
+    border-radius: 3px;
+    border: 1px solid #303030;
+    padding: 5px;
+}
+
+
+mark {
+    background-color:greenyellow
+}
+
+.mayor {
+    background-color:mediumspringgreen
+}
+
+.menor {
+    background-color:darksalmon
+}
+
+button {
+    font-size: 14px;
+    color: white;
+    background-color:darkolivegreen;
+    border-radius: 3px;
+    border: 1px solid #303030;
+    padding: 5px;
+    margin: 3px
+}
+
+.container {
+    margin:0px auto;
+    justify-content: center;
+    text-align:center
+}
+
+.container2 {
+    margin:0px auto;
+    justify-content: left;
+    text-align:left
+}
+
+
+.tituloTabla {
+    font-size: 1.2em;
+    font-weight: 800;
+    color: darkslateblue;
+    background-color:cadetblue;
+    padding: 5px;
+}
+
+.glowoff{
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+}
+.glowon{
+    filter: drop-shadow(0px 0px 20px rgb(19, 13, 201));
+}
+
+.tarjeta {
+    float: left;
+    border: 1px solid red;
+    margin:4px; padding: 2px;
+    width:300px;
+    height:210px;
+    overflow: hidden;
+}

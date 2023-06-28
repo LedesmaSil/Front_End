@@ -1,0 +1,18 @@
+Documentación directiva v-show
+https://lenguajejs.com/vuejs/directivas-vue/v-show-y-v-if/
+
+SCRIPT Vue
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+SCRIPT Axios
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+API Superheroes
+https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json
+
+API Bitcoin
+https://api.coindesk.com/v1/bpi/currentprice.json
+
+API Random User
+https://randomuser.me/api/
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+    
+    <title>Ejemplos Vue.js</title>
+
+    <!-- Mi hoja de estilos externa -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <section id="app">
+        <header>
+            <h2>La Cocina de Juan</h2>
+            <nav>
+                <section class="container">
+                    <button v-on:click="show('home')">Home</button>
+                    <button v-on:click="show('receta')">Receta</button>
+                    <button v-on:click="show('cocina')">Cocina</button>
+                    <button v-on:click="show('sobre')">Nosotros</button>
+                </section>
+            </nav>
+        </header>
+
+         <section v-show="home_visible"><home></home></section>
+         <section v-show="receta_visible"><receta></receta></section>
+         <section v-show="cocina_visible"><cocina></cocina></section>
+         <section v-show="sobre_visible"><sobre></sobre></section>
+        
+         <footer>
+             <mifooter></mifooter>
+         </footer>
+    </section>
+
+
+    <!--CDN de Vue, version de desarrollo -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <!-- Script con los componentes -->
+    <script src="js/componentes.js"></script>
+
+    <!-- Nuestro script con Vue-->
+    <script src="js/scriptvue.js"></script>
+
+
+    </script>
+</body>
+
+</html>
