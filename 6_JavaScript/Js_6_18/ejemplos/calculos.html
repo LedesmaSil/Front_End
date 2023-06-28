@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM - Mayor, Menor y Media</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h2>Ejemplo DOM</h2>
+    <h4>Suma, Mayor, Menor y Media</h4>
+    <p id="parrafo">Introduce una lista de <b>números enteros</b>, separados por <b>comas</b>.</p>
+
+    <!-- Ingreso de datos -------------------------->
+    <input type="text" id="text"></input>
+    <input type="button" id="b1" value="Cargar Ejemplo" onclick="cargarejemplo()" ></input>
+
+    <br><br>
+    <input type="button" id="b2" value="Calcular" onclick="calcular()"></input>
+    <input type="button" id="b3" value="Reiniciar" onclick="reiniciar()">
+
+    <!-- En este parráfo voy a mostrar los resultados -->
+    <p id="resultado"></p>
+
+    <script>
+        // Llena el campo "text" con algunos valores de ejemplo
+        function cargarejemplo() {
+            let aleatorio = Math.ceil(Math.random()*100)
+            let cad = aleatorio + ","
+            for (let i=0; i < 4;i++){
+                aleatorio = Math.ceil(Math.random()*100)
+                cad = cad + aleatorio + ","
+                if (i == 3){
+                    cad = cad + aleatorio
+                }
+            }
+            document.getElementById("text").value = cad
+        }
+
+        // "Reinicio" el ejemplo simplemente recargando el documento.
+        function reiniciar() {
+            location.reload()
+        }
+
+        // Proceso los valores existentes en el campo text:
+        function calcular() {
+            // Separo los elementos en el campo text y los guardo en lista.
+            let lista = document.getElementById("text").value.split(/,/)
+
+            // Valores iniciales de los cuatro resultados a mostrar
+            let mayor = -Infinity, menor = +Infinity, suma = 0, media = 0
+
+            // Calcula la suma, y busco el maximo y el mínimo:
+            for (i = 0; i < lista.length; i++) {
+                elemento = parseInt(lista[i])
+                suma = elemento + suma
+                if (elemento < menor) menor = elemento
+                if (elemento > mayor) mayor = elemento
+            }
+
+            // Calculo la media, a partir de la suma obtenida
+            media = suma / lista.length
+
+            // Utilizo .getElementById() para modificar el contenido
+            // del párrafo #resultado
+            document.getElementById("resultado").innerHTML =
+                "La suma es: " + suma + "<br>" +
+                "La media es: " + media + "<br>" +
+                "El mayor es: " + mayor + "<br>" +
+                "El menor es: " + menor + "<br>"
+        }
+    </script>
+
+</body>
+
+</html>

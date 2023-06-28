@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaciones con JS - Numbers</title>
+</head>
+<body>
+    <p>Ingresá un numero del 1 al 10:</p>
+
+    <input id="numb" type="number">
+
+    <button type="button" onclick="validarNumero1Al10()">Submit</button>
+
+    <p id="mensaje"></p>
+
+<script>
+    function validarNumero1Al10(){
+       const num = document.getElementById("numb").value;
+        console.log(num); 
+        const msg = document.getElementById("mensaje");
+
+        if(num > 0 && num <= 10){
+            msg.innerHTML = "Numero recibido " + num;
+        }else{
+            msg.innerHTML = "Debe ingresar un numero entre 1 y 10 inclusive"
+        }
+    }
+    
+</script>
+</body>
+</html>

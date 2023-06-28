@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaciones con JS</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Nombre: </td>
+                <td><input type="text" name="nombre" size="30" maxlength="100"></td>
+            </tr>
+            <tr>
+                <td>Edad: </td>
+                <td><input type="number" name="edad" size="3" maxlength="2"></td>
+            </tr>
+            <tr>
+                <td>Interés:</td>
+                <td>
+                    <select name=interes>
+                        <option value="Elegir">Elegir
+                        <option value="Comercial">Contacto comercial
+                        <option value="Clientes">Atención al cliente
+                        <option value="Proveedores">Contacto de proveedores
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="button" value="Enviar" onclick="validarForm()"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+
+        function validarForm(){
+            let datos_ok = false;
+            const form = document.getElementsByTagName("form")[0];
+            console.log(form);
+
+            const nombre = form[0].value;
+            //console.log(nombre);
+
+            if(nombre.length < 2){
+                alert("Ingrese un nombre valido");
+                form[0].value = "";
+                form[0].focus();
+            }else{
+                datos_ok = true;
+            }
+
+            const edad = form[1].value;
+            if(edad < 18){
+                alert("Debe ser mayor de edad para registrarse");
+                form[1].focus();
+                datos_ok = false;
+            }else{
+                datos_ok = true;
+            }
+
+            if(form[2].selectedIndex == 0){
+                alert("Debe elegir una opcion");
+                form[2].focus();
+                datos_ok = false;
+            }else{
+                datos_ok = true;
+            }
+
+            if(datos_ok){
+               alert("Formulario enviado exitosamente");
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creando elementos</title>
+</head>
+<body>
+
+    <section id="sec_titulo">
+
+    </section>
+
+    <script>
+        const img = document.createElement("img");
+        img.src = "http://clipart-library.com/images/Bcarognxi.png";
+        img.alt = "Pikachu";
+        img.width = "200"; //px
+        img.id="pikachu";
+        img.className = "img"
+        document.body.appendChild(img);
+
+        const titulo = document.createElement("h1");
+        titulo.innerHTML = "Titulo principal";
+
+        //const seccion = document.querySelector("#sec_titulo");
+        const seccion = document.getElementById("sec_titulo");
+        seccion.appendChild(titulo);
+    </script>
+</body>
+</html>

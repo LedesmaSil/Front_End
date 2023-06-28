@@ -1,0 +1,11 @@
+/* Estilos para el tema oscuro */
+body {
+    background-color: #1a1a1a; /* Fondo negro */
+    color: #ffffff;            /* Texto blanco */
+  }
+
+  h1 {
+    color: #ffffff;            /* Texto blanco */
+  }
+
+  /* Agrega aquí más estilos para el tema oscuro */

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificando strings</title>
+</head>
+<body>
+    <p class="parrafo">Parrafo 1</p>
+    <p class="parrafo">Parrafo 2</p>
+    <p class="parrafo">Parrafo 3</p>
+    <p class="parrafo">Parrafo 4</p>
+
+    <button onclick="cambiarTextos()" id="btn">Cambiar texto</button>
+
+    <script>
+        function cambiarTextos() {
+            //document.querySelector(".parrafo"); UNA SOLA ETIQUETA
+            let parrafos = document.querySelectorAll(".parrafo");
+            console.log(parrafos);
+            parrafos[0].innerHTML = "Soy el parrafo nuevo"
+
+            alert("BOTON APRETADO");
+        }
+
+    </script>
+</body>
+</html>

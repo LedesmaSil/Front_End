@@ -1,0 +1,5 @@
+
+Came1 Case: montoAPagar // montoTotalAPagar
+Snake Case: monto_a_pagar // monto_total_a_pagar
+
+No se uas ñ. Los nombres no pueden empezar con numeros y signos

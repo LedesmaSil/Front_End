@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos y Eventos</title>
+</head>
+<body>
+
+    <h2>Agregando estilos</h2>
+    <ul>
+        <li class="items">Item 1</li>
+        <li class="items">Item 2</li>
+        <li class="items">Item 3</li>
+        <li class="items">Item 4</li>
+    </ul>
+
+    <script>
+        //const items = document.querySelectorAll(".items");
+        const items = document.getElementsByClassName("items");
+        console.log(items);
+
+        for(let i = 0; i < items.length; i++) {
+            if(i % 2 == 0){
+                items[i].style.backgroundColor ="red";
+            }else{
+                items[i].style.backgroundColor = "blue";
+                items[i].style.color = "#fff";
+                items[i].style.fontSize = "30px";
+            }
+            
+        }
+    </script>
+
+
+    <h2>Aprendiendo eventos</h2>
+    <input type="number" name="dni">
+    <button onclick="listarDnis()">Guardar dni</button>
+
+    <ul id="lista_dnis">
+
+    </ul>
+    <script>
+        
+        let dnis = [];
+
+        function listarDnis() {    
+           const input = document.getElementsByName("dni")[0].value;
+            console.log(input);
+            dnis.push(input);
+
+            const ul = document.getElementById("lista_dnis");
+            const li = document.createElement("li");
+            li.innerHTML = input;
+            ul.appendChild(li); 
+        }
+        
+    </script>
+
+</body>
+</html>

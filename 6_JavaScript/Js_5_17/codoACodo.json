@@ -1,0 +1,16 @@
+{
+    "alumnos": [
+        {
+            "id": 1,
+            "nombre": "Jose",
+            "apellido": "Gomez"
+        },
+        {
+            "id": 2,
+            "nombre": "Fernanda",
+            "apellido": "Dias"
+        }
+    ],
+    "modulos": ["HTML", "CSS", "JS", "Python"],
+    "numComsion": "23111"
+}

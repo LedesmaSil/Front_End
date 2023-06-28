@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaciones con JS</title>
+</head>
+
+<body>
+
+
+    <form action="" name="formulario" method="get">
+        <label for="">Apellido y nombre:</label>
+        <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre:">
+        
+        <br><br>
+
+        <label for="">Sistema Operativo:</label>
+        <input type="radio" name="so" id="linux" value="Hombre"> Windows
+        <input type="radio" name="so" id="mujer" value="Mujer"> macOS
+        <input type="radio" name="so" id="mujer" value="Mujer"> Linux
+
+
+        <br><br>
+
+
+        <input type="checkbox" name="terminos" id="terminos"> Acepto los Términos y Condiciones
+        <br><br>
+        <input type="submit" id="b1" name="btn" value="Enviar">
+    </form>
+
+    <br>
+    
+    <p>Ejemplo basado en el <a href="https://www.youtube.com/watch?v=VLFBHnkC-vc">Curso Básico de Javascript 22</a>.</p>
+    <p>Material adicional (en video):</p>
+    <p> <a href="https://www.youtube.com/watch?v=cEKDyzoTXb4">Armado del form</a>.<br>
+    <p> <a href="https://www.youtube.com/watch?v=s3pC93LgP18">Validación con JS</a>.<br>
+    <p> <a href="https://www.youtube.com/watch?v=wfogZfIS03U">Extra: expresiones regulares</a>.</p>
+    <script>
+        var formulario = document.getElementsByName('formulario')[0],  
+            elementos = formulario.elements,                            // Elementos del form, no lo usamos en este script.
+            boton = document.getElementById('b1')                       
+
+
+        // --------------------------------------------------------
+        // Validamos Nombre
+        // --------------------------------------------------------
+        var validarNombre = function (e) {
+            if (formulario.nombre.value == 0) {      // Si el campo id="nombre" del form está vacio...
+                alert("Completa el campo nombre");
+                e.preventDefault();                 
+
+            }
+        };
+
+        // --------------------------------------------------------
+        // Validamos Sexo
+        // --------------------------------------------------------
+        var validarRadio = function (e) {
+            if (formulario.so[0].checked == true ||
+                formulario.so[1].checked == true ||
+                formulario.so[2].checked == true) {
+            } else {  //Si al menos uno de los Radio no está marcado....
+                alert("Selecciona un Sistema Operativo");
+                e.preventDefault();
+            }
+        };
+
+        // --------------------------------------------------------
+        // Validamos Terminos y Condiciones
+        // --------------------------------------------------------
+        var validarCheckbox = function (e) {
+            if (formulario.terminos.checked == false) {
+                alert("Acepta los términos y condiciones");
+                e.preventDefault();
+            }
+        };
+
+        // --------------------------------------------------------
+        // Se ejecuta al presionar submit e invoca a las tres validaciones
+        // --------------------------------------------------------
+        var validar = function (e) {  
+            validarNombre(e);
+            validarRadio(e);
+            validarCheckbox(e);
+        };
+
+        // --------------------------------------------------------
+        // Espera que se presione "enviar" y llama a "validar"
+        // submit es un evento DEL FORM, no del botón!
+        formulario.addEventListener("submit", validar);
+
+
+    </script>
+</body>
+</html>
